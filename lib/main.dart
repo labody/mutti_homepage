@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mutti_homepage/widgets/homemenu_panel.dart';
 import 'package:mutti_homepage/widgets/programcard.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MuttiHomePage());
@@ -84,7 +83,8 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                                   child: VerticalDivider(),
                                 ),
                                 HomeMenuPanel(
-                                  title: 'Lifetime savings \u24D8',
+                                  title: 'Lifetime savings',
+                                  infoIcon: '\u24D8',
                                   icon: FontAwesomeIcons.piggyBank,
                                   iconColor: Color(0xFFb4c4e0),
                                   subtitle: 'GHS 434.40',
@@ -100,7 +100,8 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                             HomeMenuPanel(
                               icon: FontAwesomeIcons.wallet,
                               iconColor: Colors.amber.shade300,
-                              title: 'Wallet balance \u24D8',
+                              title: 'Wallet balance',
+                              infoIcon: '\u24D8',
                               subtitle: '-',
                             ),
                             SizedBox(
@@ -112,7 +113,8 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                                     child: VerticalDivider(),
                                   ),
                                   HomeMenuPanel(
-                                    title: 'Loyalty points \u24D8',
+                                    title: 'Loyalty points',
+                                    infoIcon: '\u24D8',
                                     icon: FontAwesomeIcons.gift,
                                     iconColor: Colors.lightBlue,
                                     subtitle: 'GHS 22715.00',
@@ -324,7 +326,6 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
           iconSize: 26.0,
           selectedFontSize: 10.0,
           unselectedFontSize: 10.0,
-          //Color(0xFF3E4851),
         ),
       ),
     );

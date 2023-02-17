@@ -5,11 +5,13 @@ class HomeMenuPanel extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
   final String title;
+  final String infoIcon;
   final String subtitle;
   const HomeMenuPanel(
       {required this.icon,
       required this.iconColor,
       required this.title,
+      this.infoIcon = '',
       this.subtitle = '-',
       super.key});
 
@@ -33,13 +35,32 @@ class HomeMenuPanel extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                  color: Color(
-                    0xFF3E4851,
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: '$title  ',
+                    style: const TextStyle(
+                      color: Color(
+                        0xFF3E4851,
+                      ),
+                      fontSize: 10.0,
+                    ),
                   ),
-                  fontSize: 10.0),
+                  WidgetSpan(
+                    child: Text(
+                      infoIcon,
+                      style: const TextStyle(
+                        color: Color(
+                          0xFF3E4851,
+                        ),
+                        fontSize: 10.0,
+                      ),
+                    ),
+                    alignment: PlaceholderAlignment.middle,
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 5.0),
             Text(
