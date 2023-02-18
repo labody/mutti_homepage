@@ -254,7 +254,6 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                       borderRadius: BorderRadius.circular(5.0),
                       border: Border.all(color: const Color(0xFF3E4851)),
                     ),
-                    width: 350.0,
                     child: TextButton(
                       onPressed: () {},
                       child: Row(
