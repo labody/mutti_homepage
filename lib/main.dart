@@ -174,7 +174,6 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                   const SizedBox(height: 20.0),
                   Container(
                     height: 120.0,
-                    width: 350.0,
                     padding: const EdgeInsets.only(left: 15.0),
                     decoration: BoxDecoration(
                       color: Colors.amber.shade400,
