@@ -56,7 +56,6 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                   const SizedBox(height: 30.0),
                   Container(
                     height: 120.0,
-                    width: 350.0,
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 10.0),
                     decoration: BoxDecoration(
@@ -76,7 +75,9 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                               subtitle: '872627',
                             ),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              // mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+
                               children: const [
                                 SizedBox(
                                   height: 30.0,
@@ -96,6 +97,7 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                         const Divider(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          // mainAxisSize: MainAxisSize.min,
                           children: [
                             HomeMenuPanel(
                               icon: FontAwesomeIcons.wallet,
@@ -104,23 +106,22 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                               infoIcon: '\u24D8',
                               subtitle: '-',
                             ),
-                            SizedBox(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: const [
-                                  SizedBox(
-                                    height: 30.0,
-                                    child: VerticalDivider(),
-                                  ),
-                                  HomeMenuPanel(
-                                    title: 'Loyalty points',
-                                    infoIcon: '\u24D8',
-                                    icon: FontAwesomeIcons.gift,
-                                    iconColor: Colors.lightBlue,
-                                    subtitle: 'GHS 22715.00',
-                                  ),
-                                ],
-                              ),
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                SizedBox(
+                                  height: 30.0,
+                                  child: VerticalDivider(),
+                                ),
+                                HomeMenuPanel(
+                                  title: 'Loyalty points',
+                                  infoIcon: '\u24D8',
+                                  icon: FontAwesomeIcons.gift,
+                                  iconColor: Colors.lightBlue,
+                                  subtitle: 'GHS 22715.00',
+                                ),
+                              ],
                             ),
                           ],
                         ),
