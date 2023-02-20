@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mutti_homepage/widgets/homemenu_panel.dart';
 import 'package:mutti_homepage/widgets/programcard.dart';
+// import 'package:device_preview/device_preview.dart';
 
 void main() {
   runApp(const MuttiHomePage());
@@ -68,29 +69,33 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            HomeMenuPanel(
-                              icon: FontAwesomeIcons.addressCard,
-                              iconColor: Colors.pink.shade200,
-                              title: 'Mutti ID',
-                              subtitle: '872627',
+                            Expanded(
+                              child: HomeMenuPanel(
+                                icon: FontAwesomeIcons.addressCard,
+                                iconColor: Colors.pink.shade200,
+                                title: 'Mutti ID',
+                                subtitle: '872627',
+                              ),
                             ),
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.min,
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                // mainAxisSize: MainAxisSize.min,
 
-                              children: const [
-                                SizedBox(
-                                  height: 30.0,
-                                  child: VerticalDivider(),
-                                ),
-                                HomeMenuPanel(
-                                  title: 'Lifetime savings',
-                                  infoIcon: '\u24D8',
-                                  icon: FontAwesomeIcons.piggyBank,
-                                  iconColor: Color(0xFFb4c4e0),
-                                  subtitle: 'GHS 434.40',
-                                ),
-                              ],
+                                children: const [
+                                  SizedBox(
+                                    height: 30.0,
+                                    child: VerticalDivider(),
+                                  ),
+                                  HomeMenuPanel(
+                                    title: 'Lifetime savings',
+                                    infoIcon: '\u24D8',
+                                    icon: FontAwesomeIcons.piggyBank,
+                                    iconColor: Color(0xFFb4c4e0),
+                                    subtitle: 'GHS 434.40',
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -99,29 +104,33 @@ class _MuttiHomePageState extends State<MuttiHomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           // mainAxisSize: MainAxisSize.min,
                           children: [
-                            HomeMenuPanel(
-                              icon: FontAwesomeIcons.wallet,
-                              iconColor: Colors.amber.shade300,
-                              title: 'Wallet balance',
-                              infoIcon: '\u24D8',
-                              subtitle: '-',
+                            Expanded(
+                              child: HomeMenuPanel(
+                                icon: FontAwesomeIcons.wallet,
+                                iconColor: Colors.amber.shade300,
+                                title: 'Wallet balance',
+                                infoIcon: '\u24D8',
+                                subtitle: '-',
+                              ),
                             ),
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                SizedBox(
-                                  height: 30.0,
-                                  child: VerticalDivider(),
-                                ),
-                                HomeMenuPanel(
-                                  title: 'Loyalty points',
-                                  infoIcon: '\u24D8',
-                                  icon: FontAwesomeIcons.gift,
-                                  iconColor: Colors.lightBlue,
-                                  subtitle: 'GHS 22715.00',
-                                ),
-                              ],
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                // mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  SizedBox(
+                                    height: 30.0,
+                                    child: VerticalDivider(),
+                                  ),
+                                  HomeMenuPanel(
+                                    title: 'Loyalty points',
+                                    infoIcon: '\u24D8',
+                                    icon: FontAwesomeIcons.gift,
+                                    iconColor: Colors.lightBlue,
+                                    subtitle: 'GHS 22715.00',
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
